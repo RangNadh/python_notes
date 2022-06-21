@@ -1,0 +1,51 @@
+-> True and False we will use in programming languages to know the expression right or wrong.
+
+-> Almost any value is evaluated to True if it has some sort of content.
+
+-> Any string is True, except empty strings.
+
+-> Any number is True, except 0.
+
+-> Any list, tuple, set, and dictionary are True, except empty ones.
+
+Examples:
+
+a = 200
+b = 33
+
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+
+Output: b is not greater than a
+
+-> print(bool("Hello"))   => True
+   print(bool(15))        => True
+
+def myFunction() :
+  return True
+
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+
+Output: YES!
+
+-> Some python built-in functions will return the boolean value
+
+x = 200
+print(isinstance(x, int))
+
+Output: True
+
+-> For all these expressions the output is same that is false.
+
+bool(False)
+bool(None)
+bool(0)
+bool("")                    Output: False
+bool(())
+bool([])
+bool({})
