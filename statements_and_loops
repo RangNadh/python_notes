@@ -1,0 +1,173 @@
+-> if:
+    it is used to compare 2 values or identifying the expression that is true or false, and so on.
+
+-> elif:
+    The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+
+-> else:
+    The else keyword catches anything which isn't caught by the preceding conditions.
+
+Example:
+        a = 200
+        b = 33
+        if b > a:
+          print("b is greater than a")
+        elif a == b:
+          print("a and b are equal")
+        else:
+          print("a is greater than b")
+
+          Output: a is greater than b
+
+-> Short hand if, if - else:
+
+    if a > b: print("a is greater than b")
+
+    a = 2
+    b = 330
+    print("A") if a > b else print("B")
+
+    a = 330
+    b = 330
+    print("A") if a > b else print("=") if a == b else print("B")
+
+-> Nested if:
+    You can have if statements inside if statements, this is called nested if statements.
+
+        x = 41
+        if x > 10:
+          print("Above ten,")
+          if x > 20:
+            print("and also above 20!")
+          else:
+            print("but not above 20.")
+
+-> Pass statement:
+    if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+
+    a = 33
+    b = 200
+    if b > a:
+      pass
+
+-> Loops:
+    Loops are 2 types:
+
+-> While loops:
+    With the while loop we can execute a set of statements as long as a condition is true.
+
+    i = 1
+    while i < 6:
+      print(i)
+      i += 1
+
+->  Remember to increment i, or else the loop will continue forever.
+
+-> Break Statement: With the break statement we can stop the loop even if the while condition is true.
+
+    i = 1
+    while i < 6:
+      print(i)                            Output: 1
+      if i == 3:                                  2
+        break                                     3
+      i += 1
+
+-> Continue Statement: With the continue statement we can stop the current iteration, and continue with the next.
+
+    i = 0
+    while i < 6:                          Output: 1
+      i += 1                                      2
+      if i == 3:                                  4
+        continue                                  5
+      print(i)                                    6
+
+-> Else Statement: With the else statement we can run a block of code once when the condition no longer is true.
+
+    i = 1                                  Output: 1
+    while i < 6:                                   2
+      print(i)                                     3
+      i += 1                                       4
+    else:                                          5
+      print("i is no longer less than 6")          i is no longer less than 6
+
+-> For loops:
+
+    -> A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+    -> This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+
+    -> With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:                                       Output: apple
+      print(x)                                                     banana
+                                                                   cherry
+
+-> Break Statement:
+
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:
+      print(x)                                             Output: apple
+      if x == "banana":                                            banana
+        break
+
+        -> if break comes before print
+
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:
+      if x == "banana":                                    Output: apple
+        break
+      print(x)
+
+-> Continue Statement:
+
+    fruits = ["apple", "banana", "cherry"]
+    for x in fruits:                                       Output: apple
+      if x == "banana":                                            cherry
+        continue
+      print(x)
+
+-> The range() Function:
+
+    for x in range(6):
+      print(x)
+
+      => range(start, stop, step)
+
+-> Else in for loop:
+
+    The else keyword in a for loop specifies a block of code to be executed when the loop is finished.
+
+    for x in range(6):
+      print(x)
+    else:                                                  Output: 0
+      print("Finally finished!")                                   1
+                                                                   2
+                                                                   3
+                                                                   4
+                                                                   5
+                                                                   6
+                                                                   Finally finished!
+
+    -> if we use break in the code then else part will not be excecute.
+
+-> Nested loops:
+
+    adj = ["red", "big", "tasty"]
+    fruits = ["apple", "banana", "cherry"]
+    for x in adj:
+      for y in fruits:
+        print(x, y)                                       Output: red apple
+                                                                  red banana
+                                                                  red cherry
+                                                                  big apple
+                                                                  big banana
+                                                                  big cherry
+                                                                  tasty apple
+                                                                  tasty banana
+                                                                  tasty cherry
+
+-> Pass Statement:
+
+    for x in [0, 1, 2]:
+      pass              -> if we donot use pass it will get error
